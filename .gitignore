@@ -326,3 +326,5 @@ __pycache__/
 # tools/**
 # !tools/packages.config
 /App_Data/
+/config/*
+!/config/.gitkeep
