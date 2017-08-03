@@ -1,8 +1,5 @@
 version: '3'
 
-#The license file will be found under ./App_Data
-#Configuration files (visualisation.config, NLog.config and Web.config) will be mounted from ./config
-
 services:
   SenseAdapt_App:
     build: .
