@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  SenseAdapt_App:
+    build: .
+    image: senseadapt:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./App_Data:/SenseAdapt/App_Data
+      - ./config/visualisation.config:/SenseAdapt/visualisation.config:ro
+      - ./config/NLog.config:/SenseAdapt/NLog.config:ro
+      - ./config/Web.config:/SenseAdapt/Web.config:ro
+    environment:
+      MONO_ASPNET_WEBCONFIG_CACHESIZE: 2048
+    restart: always
